@@ -3,9 +3,10 @@
 
 ## Ejercicio 1
 ### a)
-En este caso no tiene sentido evaluar la complejidad de la función pues nunca acaba. Esto
-se debe a que en nuestro primer bucle for se utiliza i como iterador. Sin embargo este no es
-cambiado en ningún momento y por ello la condición i<=n siempre sería cierta(salvo n<1).
+En este caso tenemos una complejidad de O(nlog(n)). Esto se debe a que tenemos 3 for anidados. El
+primero tiene una complejidad de O(n), el segundo siempre va a tomar 4-5 iteraciones así que tiene
+una complejidad de O(1) y el tercero tiene una complejidad de O(log(n)). Por tanto al estar anidados
+al multiplicar las complejidades obtenemos una total de O(nlog(n)).
 
 ### b)
 La complejidad de esta función es de O(nlog(n)). Esto se debe a que tenemos dos partes de código con

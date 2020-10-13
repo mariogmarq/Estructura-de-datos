@@ -10,27 +10,29 @@
 
 /**
  * @brief T.D.A. Ficha
- * 
- * Una instancia del tipo de dato abstracto Ficha es un objeto que representa una 
- * ficha del tetris. Está representado por una forma seleccionada de un enum.
+ *
+ * Una instancia del tipo de dato abstracto Ficha es un objeto que representa
+ * una ficha del tetris. Está representado por una forma seleccionada de un
+ * enum.
  */
-class ficha
-{
-
-public:
+class ficha {
+   public:
     /**
      * @brief enum indicando el tipo de ficha
      */
-    enum tipo
-    {
-        vacio,
-        recta,
-        cuadrado,
-        t,
-        lDerecha,
-        lIzquierda,
-        zDerecha,
-        zIzquierda
+    enum tipo {
+	vacio,
+	recta,
+	cuadrado,
+	t,
+	lDerecha,
+	lIzquierda,
+	zDerecha,
+	zIzquierda,
+	/**
+	 * @warning Solo usado por acumulador
+	 */
+	activo
     };
 
     /**
@@ -71,15 +73,16 @@ public:
     /**
      * @brief devuelve la matriz asociada a la forma de la ficha
      * @return la matriz asociada a la forma de la ficha
-     * @note en la matriz solo se marcan las casillas ocupadas y las no ocupadas tendran el tipo tipo::vacio
-     * @see ficha::tipo 
+     * @note en la matriz solo se marcan las casillas ocupadas y las no ocupadas
+     * tendran el tipo tipo::vacio
+     * @see ficha::tipo
      */
     std::vector<std::vector<ficha::tipo>> getMatriz() const;
 
-private:
+   private:
     /**
- * @brief forma de la ficha
- */
+     * @brief forma de la ficha
+     */
     tipo forma;
 };
 

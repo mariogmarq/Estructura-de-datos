@@ -10,7 +10,7 @@
 #include <istream>
 #include <ostream>
 
-#include "../imagenES/imagenES.h"
+#include "imagenES.h"
 
 typedef unsigned char byte;
 

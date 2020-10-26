@@ -1,7 +1,6 @@
 #include "imagen.h"
 
-int main(const char **vargs, int nargs)
-{
+int main(int nargs, const char** vargs) {
     Imagen img(vargs[1]);
     int x1 = img.ancho() / 4;
     int x2 = img.ancho() * 3 / 4;

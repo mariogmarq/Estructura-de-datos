@@ -112,7 +112,7 @@ void Imagen::umbralizar(byte t1, byte t2) {
 Imagen Imagen::zoom(int x1, int y1, int x2, int y2) const {
     // Comprobamos que las dimensiones son validas
     if (x1 < 0 || x2 < 0 || y1 < 0 || y2 < 0) throw(-1);
-    if (x1 >= alt || x2 >= alt || y1 >= longt || y2 >= longt) throw(-1);
+    if (x1 >= longt || x2 >= longt || y1 >= alt || y2 >= alt) throw(-1);
 
     // calculamos dimension de la nueva imagen
     int newAlt = 2 * (y2 - y1) - 1;

@@ -171,17 +171,41 @@ Imagen Imagen::corregirContraste() const {
 }
 
 Imagen Imagen::icono(int nf, int nc) const {
+    bool filaespar = alt%2==0;
+
     // Comprobamos que el nuevo tamaño es correcto
     if (nf < 0 || nc < 0) throw(-1);
     if (nf >= alt || nc >= longt) throw(-1);
 
     Imagen rv;
+    Imagen aux;
+    aux.allocate(nf, longt, this->tipo);
     rv.allocate(nf, nc, this->tipo);
-    int av;
     byte celda;
 
-    av = alt / nf;
-    for (int i = 0; i < nf; i++) {
+    int av = alt/nf;
+    int contador = 0;
+    for (int i = 0; i < alt; i++){
+        for (int j = 0; j < longt; j++){
+            celda = celda + valor(i,j);
+            contador++;
+            if(contador == av){
+                aux.asignarPixel(i, j-contador, celda/contador);
+                celda = 0;
+                contador = 0;
+            }
+        }
+    }
+    for (int j = 0; j < nc; j++){
+        for (int i = 0; i < alt; i++){
+            celda = celda + aux.valor(i,j);
+            contador++;
+            if(contador == av) {
+                rv.asignarPixel(i - contador, j, celda / contador);
+                contador = 0;
+                celda = 0;
+            }
+        }
     }
 
     return rv;

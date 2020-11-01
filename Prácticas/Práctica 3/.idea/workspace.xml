@@ -28,9 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43df971d-84a4-4e20-a1b0-c2d5618f6e77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pila_Max/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pila_Max/include/cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pila_Max/src/cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pila_Max/src/pila_max_cola.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -97,7 +100,9 @@
       <workItem from="1604222970102" duration="39000" />
       <workItem from="1604223172908" duration="19000" />
       <workItem from="1604223195026" duration="63000" />
-      <workItem from="1604224808710" duration="6433000" />
+      <workItem from="1604224808710" duration="6967000" />
+      <workItem from="1604243901817" duration="724000" />
+      <workItem from="1604244635346" duration="722000" />
     </task>
     <servers />
   </component>
@@ -125,9 +130,9 @@
       <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="855" y="186" width="424" height="485" key="FileChooserDialogImpl/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604223256197" />
-    <state x="477" y="188" width="1022" height="731" key="SettingsEditor" timestamp="1604224905296">
+    <state x="477" y="188" width="1022" height="731" key="SettingsEditor" timestamp="1604244622910">
       <screen x="56" y="27" width="1864" height="1053" />
     </state>
-    <state x="477" y="188" width="1022" height="731" key="SettingsEditor/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604224905296" />
+    <state x="477" y="188" width="1022" height="731" key="SettingsEditor/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604244622910" />
   </component>
 </project>

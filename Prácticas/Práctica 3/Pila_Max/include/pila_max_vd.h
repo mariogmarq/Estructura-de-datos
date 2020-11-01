@@ -1,6 +1,6 @@
-//
-// Created by daniel on 1/11/20.
-//
+/**
+ * @author Daniel Alconchel Vázquez y Mario García Márquez
+ */
 
 #ifndef PRACTICA_3_PILA_MAX_VD_H
 #define PRACTICA_3_PILA_MAX_VD_H
@@ -37,6 +37,7 @@ class Elemento{
  * @brief TDA Pila con Máximo
  * Representa una pila, donde cada elemento se contiene un dato y el valor máximo de la pila, cuando se introdujo
  * @warning Al ser una pila todas las operaciones se realizan en el tope
+ * @warning Representación usando vectores de la STL
  */
 
 template<class T>
@@ -97,5 +98,4 @@ public:
     Elemento<T> Consultar() const;
 };
 
-
-#endif //PRÁCTICA_3_PILA_MAX_VD_H
+#endif

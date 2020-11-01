@@ -28,12 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43df971d-84a4-4e20-a1b0-c2d5618f6e77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pila_Max/include/cola.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_cola.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pila_Max/src/cola.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pila_Max/src/pila_max_cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cola_Max/include/cola_max.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cola_Max/src/cola_max.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,13 +73,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Cola_Max/src" />
       <recent name="$PROJECT_DIR$/Pila_Max/src" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -102,7 +102,8 @@
       <workItem from="1604223195026" duration="63000" />
       <workItem from="1604224808710" duration="6967000" />
       <workItem from="1604243901817" duration="724000" />
-      <workItem from="1604244635346" duration="722000" />
+      <workItem from="1604244635346" duration="1555000" />
+      <workItem from="1604246886156" duration="2091000" />
     </task>
     <servers />
   </component>
@@ -130,9 +131,9 @@
       <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="855" y="186" width="424" height="485" key="FileChooserDialogImpl/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604223256197" />
-    <state x="477" y="188" width="1022" height="731" key="SettingsEditor" timestamp="1604244622910">
+    <state x="477" y="188" width="1022" height="731" key="SettingsEditor" timestamp="1604245626089">
       <screen x="56" y="27" width="1864" height="1053" />
     </state>
-    <state x="477" y="188" width="1022" height="731" key="SettingsEditor/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604244622910" />
+    <state x="477" y="188" width="1022" height="731" key="SettingsEditor/56.27.1864.1053/1920.0.1366.768@56.27.1864.1053" timestamp="1604245626089" />
   </component>
 </project>

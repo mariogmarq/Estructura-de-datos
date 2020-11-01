@@ -49,7 +49,7 @@ void Pila_max_VD<T>::Quitar() {
 }
 
 template<class T>
-bool Pila_max_VD<T>::vacia() {
+bool Pila_max_VD<T>::vacia() const{
     if(pila.size()==0)
         return true;
     else

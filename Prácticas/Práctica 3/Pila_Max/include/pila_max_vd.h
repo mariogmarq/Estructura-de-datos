@@ -78,7 +78,7 @@ public:
      * @brief Comprueba si la pila está vacía
      * @return Devuelve true si está vacia. En caso contrario, devuelve false
      */
-    bool vacia();
+    bool vacia() const;
 
     /**
      * @brief Inserta un elemento en el tope de la pila

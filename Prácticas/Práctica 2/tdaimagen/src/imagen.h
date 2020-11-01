@@ -138,7 +138,14 @@ class Imagen {
    */
   Imagen corregirContraste() const;
 
-  // morphing y esteganografia
+  /**
+   * @brief calcula un morphing entre la imagen actual y orig
+   * @pre ambas imagenes deben tener las mismas dimensiones
+   * @param orig Imagen a la que se llega en el morphing
+   * @param step numero de fotogramas, maximo 256
+   * @post escribe un video con una transformacion morphing
+   */
+  void morphing(const Imagen &orig, int step);
 
   /**
    * @brief sobrecarga del operador de asignación

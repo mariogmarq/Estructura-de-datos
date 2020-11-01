@@ -6,6 +6,8 @@
 #include "imagen.h"
 
 #include <cmath>
+#include <cstdlib>
+#include <string>
 
 #include "../imagenES/imagenES.h"
 
@@ -171,45 +173,53 @@ Imagen Imagen::corregirContraste() const {
 }
 
 Imagen Imagen::icono(int nf, int nc) const {
-    bool filaespar = alt%2==0;
-
+    Imagen rv;
     // Comprobamos que el nuevo tamaño es correcto
     if (nf < 0 || nc < 0) throw(-1);
     if (nf >= alt || nc >= longt) throw(-1);
 
-    Imagen rv;
-    Imagen aux;
-    aux.allocate(nf, longt, this->tipo);
+    // Calculamos el tamaño de cada bloque que sera un unico pixel
+    int fila = alt / nf;
+    int columna = longt / nc;
+
     rv.allocate(nf, nc, this->tipo);
-    byte celda;
 
-    int av = alt/nf;
-    int contador = 0;
-    for (int i = 0; i < alt; i++){
-        for (int j = 0; j < longt; j++){
-            celda = celda + valor(i,j);
-            contador++;
-            if(contador == av){
-                aux.asignarPixel(i, j-contador, celda/contador);
-                celda = 0;
-                contador = 0;
-            }
+    for (int i = 0; i < nf; ++i) {
+        for (int j = 0; j < nc; ++j) {
+            double celda = 0;
+            // Calculamos la media del bloque
+            for (int h = 0; h < fila; ++h)
+                for (int z = 0; z < columna; ++z)
+                    celda += this->valor(h + i * fila, z + j * columna);
+
+            rv.asignarPixel(i, j, ceil(celda / (fila * columna)));
         }
     }
-    for (int j = 0; j < nc; j++){
-        for (int i = 0; i < alt; i++){
-            celda = celda + aux.valor(i,j);
-            contador++;
-            if(contador == av) {
-                rv.asignarPixel(i - contador, j, celda / contador);
-                contador = 0;
-                celda = 0;
-            }
-        }
-    }
-
     return rv;
 }
 
 TipoImagen Imagen::tipoImagen() const { return tipo; }
 
+void Imagen::morphing(const Imagen &orig, int step) {
+    // Comprobamos que ambas imagenes tienen misma dimension y que el numero de
+    // pasos es correcto
+    if (this->longt != orig.longt || this->alt != orig.alt) throw(-1);
+    if (step <= 0 || step > 256) throw(-1);
+
+    Imagen fotograma(*this);
+
+    for (int i = 0; i < step; ++i) {
+        for (int j = 0; j < fotograma.altura(); ++j) {
+            for (int z = 0; z < fotograma.ancho(); ++z) {
+                double paso = (1.0 * i) / step;
+                fotograma.asignarPixel(
+                    j, z,
+                    paso * this->valor(j, z) + (1 - paso) * orig.valor(j, z));
+            }
+        }
+        std::string name = "Fotograma" + std::to_string(i) + ".pgm";
+        fotograma.EscribirImagen(name.c_str());
+    }
+
+    std::system("animate Fotograma*.pgm");
+}

@@ -12,6 +12,8 @@ using namespace std;
 /**
  * @brief transforma p en otra pila sin elementos consecutivos repetidos
  * @param p la pila a ser transformada
+ * @warning no usamos la libreria algorithm. Usandola podriamos usar la funcion
+ * unique y un functor apropiado
  */
 void transformarpila(stack<int>& p) {
   // Para lograr el resultado deseado primero pasaremos los elementos a un

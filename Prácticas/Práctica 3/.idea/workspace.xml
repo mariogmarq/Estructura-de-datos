@@ -28,11 +28,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43df971d-84a4-4e20-a1b0-c2d5618f6e77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cola_Max/include/cola_max.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cola_Max/src/cola_max.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/include/cola.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/include/pila_max_cola.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/include/pila_max_vd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/src/cola.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/src/pila_max_cola.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pila_Max/src/pila_max_vd.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +81,6 @@
       <recent name="$PROJECT_DIR$/Pila_Max/src" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,6 +101,15 @@
       <workItem from="1604243901817" duration="724000" />
       <workItem from="1604244635346" duration="1555000" />
       <workItem from="1604246886156" duration="2091000" />
+      <workItem from="1604512668858" duration="2000" />
+      <workItem from="1604857840416" duration="5000" />
+      <workItem from="1604924101435" duration="20000" />
+      <workItem from="1605000506835" duration="19000" />
+      <workItem from="1605007210828" duration="329000" />
+      <workItem from="1605023141862" duration="216000" />
+      <workItem from="1605171373415" duration="48000" />
+      <workItem from="1605255999485" duration="261000" />
+      <workItem from="1605256724649" duration="4000" />
     </task>
     <servers />
   </component>

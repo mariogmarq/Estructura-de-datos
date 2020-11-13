@@ -1,12 +1,10 @@
-#include "../include/cola.h"
 /**
   * @file cola.cpp
   * @brief Implementación del TDA Cola
   *
   */
 #include <cassert>
-// #include <cola.h>  El codigo ya se incluye en cola.h
-
+#include "../include/Cola.h"
 /* _________________________________________________________________________ */
 
 

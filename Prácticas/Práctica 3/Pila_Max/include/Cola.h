@@ -123,6 +123,5 @@ public:
     }
 };
 
-#include <cola.cpp>
 
 #endif // __Cola_H__

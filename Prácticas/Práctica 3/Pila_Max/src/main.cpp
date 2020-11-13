@@ -1,22 +1,17 @@
 #include <iostream>
-#include "../include/pila_max_vd.h"
-#include <vector>
+#include "../include/Pila_max.h"
+
 using namespace std;
 
-
 int main(){
-    Pila_max_VD<int> Pila;
-    vector<int> pila;
-    Elemento<int> a;
+    Pila_max<int> pila;
     int i;
-    for(i=10; i>=0; i--) {
-        a.Insertar(i,i);
-        Pila.Insertar(a);
-    }
-    while(!Pila.vacia()){
-        a.Insertar(Pila.Consultar().ConsultarDato(), Pila.Consultar().ConsultarMaximo());
-        cout << a.ConsultarDato() << " " << a.ConsultarMaximo() << endl;
-        Pila.Quitar();
+    for(i=10; i>=0; i--)
+        pila.push(i);
+    while (!pila.empty()){
+        elemento<int> x = pila.tope();
+        cout << x << endl;
+        pila.pop();
     }
     return 0;
 }

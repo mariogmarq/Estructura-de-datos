@@ -7,61 +7,53 @@
 
 using namespace std;
 
-template<class T>
-Pila_max<T>::Pila_max() {
-    maximo = nullptr;
-    Cola<T>();
-}
+template <class T>
+Pila_max<T>::Pila_max() {}
 
-template<class T>
-Pila_max<T>::~Pila_max<T>() {
-    maximo = nullptr;
-    ~Cola<T>();
-}
+template <class T>
+Pila_max<T>::~Pila_max() {}
 
-template<class T>
+template <class T>
 int Pila_max<T>::size() {
     return pila.num_elementos();
 }
 
-template<class T>
+template <class T>
 T Pila_max<T>::max() const {
     return maximo;
 }
 
-template<class T>
+template <class T>
 bool Pila_max<T>::empty() {
-    if(pila.num_elementos() == 0)
+    if (pila.num_elementos() == 0)
         return true;
     else
         return false;
 }
 
-template<class T>
+template <class T>
 void Pila_max<T>::pop() {
     pila.quitar();  // El frente de la cola es el tope de la pila
 }
 
-template<class T>
+template <class T>
 elemento<T> Pila_max<T>::tope() const {
-    return pila.frente();   // El frente de la cola es el tope de la pila
+    return pila.frente();  // El frente de la cola es el tope de la pila
 }
 
-template<class T>
-Pila_max<T> & Pila_max<T>::operator=(const Pila_max<T> &p) {
+template <class T>
+Pila_max<T> &Pila_max<T>::operator=(const Pila_max<T> &p) {
     pila = p.pila;
     maximo = p.maximo;
     return *this;
 }
 
-template<class T>
+template <class T>
 void Pila_max<T>::push(const T &elem) {
     elemento<T> insertar;
 
-    if(pila.vacia())
-        maximo = elem;
-    if(elem > maximo)
-        maximo = elem;
+    if (pila.vacia()) maximo = elem;
+    if (elem > maximo) maximo = elem;
 
     insertar.dato = elem;
     insertar.maximo = maximo;
@@ -71,7 +63,7 @@ void Pila_max<T>::push(const T &elem) {
 
     Cola<elemento<T>> aux;
     aux.poner(insertar);
-    while(!pila.vacia()){
+    while (!pila.vacia()) {
         aux.poner(pila.frente());
         pila.quitar();
     }

@@ -7,16 +7,17 @@
 #define PILA_MAX_PILA_MAX_COLA_H
 
 #include <iostream>
+
 #include "Cola.h"
 
 /**
  * @brief Struct que representa cada posición de la pila
  * @tparam T tipo de dato
  */
-template<class T>
-struct elemento{
-    T dato;     // Elemento a almacenar
-    T maximo;   // Elemento máximo
+template <class T>
+struct elemento {
+    T dato;    // Elemento a almacenar
+    T maximo;  // Elemento máximo
 };
 
 /**
@@ -25,16 +26,16 @@ struct elemento{
  * Implementado usando colas template
  * @tparam T tipo de dato
  */
-template<class T>
+template <class T>
 class Pila_max {
-private:
-    T maximo;   // Maximo de la pila
-    Cola<elemento<T>> pila;   // Representación de la pila
+   private:
+    T maximo;                // Maximo de la pila
+    Cola<elemento<T>> pila;  // Representación de la pila
 
-public:
+   public:
     /**
-    * @brief Constructor de la clase
-    */
+     * @brief Constructor de la clase
+     */
     Pila_max();
 
     /**
@@ -75,14 +76,14 @@ public:
     /**
      * @return Devuelve el máximo de la pila
      */
-    T  max() const;
+    T max() const;
 
     /**
      * @brief Sobrecarga operador =
      * @param p instancia pila_max
      * @return instancia pila_max
      */
-    Pila_max<T>& operator=(const Pila_max<T> &p);
+    Pila_max<T> &operator=(const Pila_max<T> &p);
 };
 
 /**
@@ -92,11 +93,13 @@ public:
  * @param elem elemento a leer
  * @return Lectura
  */
-template<class T>
-std::ostream& operator<<(std::ostream &os, const elemento<T> &elem){
-    os << "Elemento: " << elem.dato << " " << "Máximo: " << elem.maximo;
+template <class T>
+std::ostream &operator<<(std::ostream &os, const elemento<T> &elem) {
+    os << "Elemento: " << elem.dato << " "
+       << "Máximo: " << elem.maximo;
     return os;
 };
 
+#include "../src/Pila_max_Cola.cpp"
 
-#endif //PILA_MAX_PILA_MAX_COLA_H
+#endif  // PILA_MAX_PILA_MAX_COLA_H

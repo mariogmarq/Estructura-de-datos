@@ -1,10 +1,10 @@
 /**
-  * @file cola.h
-  * @brief Fichero cabecera del TDA Cola
-  *
-  * Gestiona una secuencia de elementos con facilidades para la inserción y
-  * borrado de elementos en un extremo
-  */
+ * @file cola.h
+ * @brief Fichero cabecera del TDA Cola
+ *
+ * Gestiona una secuencia de elementos con facilidades para la inserción y
+ * borrado de elementos en un extremo
+ */
 
 #ifndef __Cola_H__
 #define __Cola_H__
@@ -38,43 +38,39 @@
  * @date Octubre 2011
 */
 template <class T>
-class Cola{
-
-private:
+class Cola {
+   private:
     struct Celda {
         T elemento;        ///< Elemento de información.
-        Celda * siguiente; ///< Puntero al siguiente nodo.
+        Celda* siguiente;  ///< Puntero al siguiente nodo.
 
         /**
          * @brief Constructor por defecto
          */
-        Celda() : siguiente(0){
-        }
+        Celda() : siguiente(0) {}
         /**
          * @brief Constructor con parámetros
          * @param elem Elemento de información.
          * @param sig Puntero al siguiente nodo.
          */
-        Celda(const T & elem, Celda * sig): elemento(elem), siguiente(sig){
-        }
+        Celda(const T& elem, Celda* sig) : elemento(elem), siguiente(sig) {}
     };
 
-    Celda * primera; ///< Puntero al primer nodo de la lista.
-    Celda * ultima;  ///< Puntero al último nodo de la lista.
+    Celda* primera;  ///< Puntero al primer nodo de la lista.
+    Celda* ultima;   ///< Puntero al último nodo de la lista.
     int num_elem;    ///< Número de elementos de la cola.
 
-public:
+   public:
     // ---------------  Constructores ----------------
     /**
      * @brief Constructor por defecto
      */
-    Cola(): primera(0), ultima(0), num_elem(0){
-    }
+    Cola() : primera(0), ultima(0), num_elem(0) {}
     /**
      * @brief Constructor de copias
      * @param original La cola de la que se hará la copia.
      */
-    Cola(const Cola<T> & original);
+    Cola(const Cola<T>& original);
     // ------------------ Destructor ------------------
     /**
      * @brief Destructor
@@ -85,32 +81,30 @@ public:
      * @brief Operador de asignación
      * @param otra La cola que se va a asignar.
      */
-    Cola& operator= (const Cola<T> & otra);
+    Cola& operator=(const Cola<T>& otra);
     /**
      * @brief Comprueba si la cola está vacía
      */
-    bool vacia() const{
-        return num_elem==0;
-    }
+    bool vacia() const { return num_elem == 0; }
     /**
      * @brief Devuelve el elemento del frente de la cola
      */
-    T& frente (){
-        assert(primera!=0);        //Si la cola está vacía, abortar
-        return primera->elemento;  //Devuelve el elemento del frente de la cola
+    T& frente() {
+        assert(primera != 0);      // Si la cola está vacía, abortar
+        return primera->elemento;  // Devuelve el elemento del frente de la cola
     }
     /**
      * @brief Devuelve el elemento del frente de una cola constante
      */
-    const T & frente () const{
-        assert(primera!=0);        //Si la cola está vacía, abortar
-        return primera->elemento;  //Devuelve el elemento del frente de la cola
+    const T& frente() const {
+        assert(primera != 0);      // Si la cola está vacía, abortar
+        return primera->elemento;  // Devuelve el elemento del frente de la cola
     }
     /**
      * @brief Añade un elemento al final de la cola
      * @param elem Elemento que se va a añadir.
      */
-    void poner(const T & elem);
+    void poner(const T& elem);
     /**
      * @brief Quita el elemento del frente de la cola
      */
@@ -118,10 +112,9 @@ public:
     /**
      * @brief Devuelve el número de elementos de la cola
      */
-    int num_elementos() const{
-        return num_elem;
-    }
+    int num_elementos() const { return num_elem; }
 };
 
+#include "../src/Cola.cpp"
 
-#endif // __Cola_H__
+#endif  // __Cola_H__

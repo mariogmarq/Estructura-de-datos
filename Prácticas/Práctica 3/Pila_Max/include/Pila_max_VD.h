@@ -13,10 +13,10 @@
  * @brief Struct que representa cada posición de la pila
  * @tparam T tipo de dato
  */
-template<class T>
-struct elemento{
-    T dato;     // Elemento a almacenar
-    T maximo;   // Elemento máximo
+template <class T>
+struct elemento {
+    T dato;    // Elemento a almacenar
+    T maximo;  // Elemento máximo
 };
 
 /**
@@ -25,57 +25,57 @@ struct elemento{
  * Representación de una pila con máximo, a través del uso de vectores de la STL
  * @tparam T tipo de dato
  */
-template<class T>
+template <class T>
 class Pila_max {
-private:
+   private:
     std::vector<elemento<T>> pila;  //  Pila con máximo
     T maximo;
 
-public:
+   public:
     /**
      * @brief Constructor de la clase
      */
-     Pila_max();
+    Pila_max();
 
-     /**
-      * @brief Destructor de la clase
-      */
-     ~Pila_max();
+    /**
+     * @brief Destructor de la clase
+     */
+    ~Pila_max();
 
-     /**
-      * @brief Comprueba si la pila está vacía
-      * @return Devuelve true en caso afirmativo @else devuelve false
-      */
-     bool empty();
+    /**
+     * @brief Comprueba si la pila está vacía
+     * @return Devuelve true en caso afirmativo @else devuelve false
+     */
+    bool empty();
 
-     /**
-      * @return Devuelve tamaño de la pila
-      */
-     int size();
+    /**
+     * @return Devuelve tamaño de la pila
+     */
+    int size();
 
-     /**
-      * @brief Inserta un elemento
-      * @warning Como es una pila, solo se puede insertar en el tope
-      * @param T elemento a insertar
-      */
-     void push(const T &elem);
+    /**
+     * @brief Inserta un elemento
+     * @warning Como es una pila, solo se puede insertar en el tope
+     * @param T elemento a insertar
+     */
+    void push(const T &elem);
 
-     /**
-      * @brief Quita un elemento
-      * @warning Como es una pila, solo puede quitar elementos del tope
-      */
-     void pop();
+    /**
+     * @brief Quita un elemento
+     * @warning Como es una pila, solo puede quitar elementos del tope
+     */
+    void pop();
 
-     /**
-      * @brief Acceso al tope
-      * @return Devuelve el elemento que hay en el tope
-      */
-     elemento<T> tope() const;
+    /**
+     * @brief Acceso al tope
+     * @return Devuelve el elemento que hay en el tope
+     */
+    elemento<T> tope() const;
 
-     /**
-      * @return Devuelve el máximo de la pila
-      */
-     T  max() const;
+    /**
+     * @return Devuelve el máximo de la pila
+     */
+    T max() const;
 };
 
 /**
@@ -85,11 +85,12 @@ public:
  * @param elem elemento a leer
  * @return Lectura
  */
-template<class T>
-std::ostream& operator<<(std::ostream &os, const elemento<T> &elem){
-    os << "Elemento: " << elem.dato << " " << "Máximo: " << elem.maximo;
+template <class T>
+std::ostream &operator<<(std::ostream &os, const elemento<T> &elem) {
+    os << "Elemento: " << elem.dato << " "
+       << "Máximo: " << elem.maximo;
     return os;
 };
 
-
-#endif //PILA_MAX_PILA_MAX_VD_H
+#include "../src/Pila_max_VD.cpp"
+#endif  // PILA_MAX_PILA_MAX_VD_H

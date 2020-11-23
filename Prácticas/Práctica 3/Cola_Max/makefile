@@ -1,4 +1,4 @@
-bin/main: obj/main.o include/Pila_max.h include/Pila_max_VD.h include/Pila_max_Cola.h
+bin/main: obj/main.o include/Cola_max.h 
 	g++ obj/main.o -Iinclude/ -o bin/main 
 
 obj/main.o: src/main.cpp

@@ -9,13 +9,13 @@ using namespace std;
 template<class T>
 Pila_max<T>::Pila_max() {
     pila.clear();
-    maximo= nullptr;
+    maximo = NULL;
 }
 
 template<class T>
 Pila_max<T>::~Pila_max() {
     pila.clear();
-    maximo= nullptr;
+    maximo = NULL;
 }
 
 template<class T>
@@ -39,7 +39,7 @@ void Pila_max<T>::pop() {
 
 template<class T>
 elemento<T> Pila_max<T>::tope() const{
-    return pila.end();
+    return pila[pila.size()-1];
 }
 
 template<class T>

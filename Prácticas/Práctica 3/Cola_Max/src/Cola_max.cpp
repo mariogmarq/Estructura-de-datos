@@ -9,12 +9,12 @@ using namespace std;
 
 template<class T>
 Cola_max<T>::Cola_max() {
-    maximo = nullptr;
+    maximo = NULL;
 }
 
 template<class T>
 Cola_max<T>::~Cola_max<T>() {
-    maximo = nullptr;
+    maximo = NULL;
     while(!cola.empty())
         cola.pop();
 }

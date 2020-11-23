@@ -75,10 +75,26 @@ public:
 
     /**
      * @brief Devuelve el tamaño de la cola
-     * @return Tamañp de la cola
+     * @return Tamaño de la cola
      */
     int size() const;
 };
 
+
+/**
+ * @brief Método para la lectura de un dato tipo elemento @see elemento
+ * @tparam T tipo de dato del struct
+ * @param os flujo de lectura
+ * @param elem elemento a leer
+ * @return Lectura
+ */
+template <class T>
+std::ostream &operator<<(std::ostream &os, const elemento<T> &elem) {
+    os << "Elemento: " << elem.dato << " "
+       << "Máximo: " << elem.maximo;
+    return os;
+};
+
+#include "../src/Cola_max.cpp"
 
 #endif

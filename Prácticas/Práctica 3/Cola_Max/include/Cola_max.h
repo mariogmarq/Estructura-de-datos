@@ -24,7 +24,7 @@ template<class T>
  * @brief TDA Cola Máximo
  * Representación de una cola, a través de la pila stack de la STL, de
  * una cola con máximo
- * @warning Se introducen los elementos por el "front de la cola y se eliminan por el "back"
+ * @warning Se introducen los elementos por el "back" de la cola y se eliminan por el "front"
  */
 class Cola_max {
 private:
@@ -45,13 +45,13 @@ public:
     /**
      * @brief Inserta un elemento en la cola
      * @param T elemento a insertar
-     * @warning Los elementos se insertan en el front
+     * @warning Los elementos se insertan en el back
      */
     void Insertar(const T &elemen);
 
     /**
      * @brief Elimina un elemento de la cola
-     * @warning Los elementos se eliminan en el back
+     * @warning Los elementos se eliminan en el front
      */
     void Eliminar();
 

@@ -10,4 +10,4 @@ clean:
 rebuild: clean bin/main
 
 documentacion: 
-	doxygen Doxyfile
+	doxygen doc/doxyfile

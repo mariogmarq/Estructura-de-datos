@@ -58,6 +58,12 @@ void Cola_max<T>::Insertar(const T &elemen) {
     stack<elemento<T>> aux;
     elemento<T> insertar;
 
+    /* 	La insercción en la pila se hace también en el tope,
+    	pero hemos considerado el tope de la pila como el
+		frente de la cola, luego hay que invertir la pila para 
+		hacer la insercción y que quede asi en el back y volverla a invertir
+		para que esté correctamente ordenado */
+
     if(cola.empty())
         maximo = elemen;
     if(elemen > maximo)

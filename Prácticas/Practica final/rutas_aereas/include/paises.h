@@ -12,10 +12,11 @@
 
 /**
  * @brief TDA Paises, representa todos los paises que se pueden encontrar en una ruta aerea
+ * @note usar junto a rutas aereas para determinar los paises de estas
  */
 class Paises {
     private:
-        std::map<std::string, Pais> paises;
+        std::map<Punto, Pais> paises;
 
     public:
         /**
@@ -24,16 +25,16 @@ class Paises {
         Paises();
 
         /**
-         * @brief sobrecarga del operador [] para obtener un pais mediante su nombre
-         * @param nombre nombre del pais
-         * @return el pais con el nombre asociado
+         * @brief sobrecarga del operador [] para obtener un pais mediante su localizacion
+         * @param localizacion localizacion del pais a buscar
+         * @return el pais con la ubicacion asociada
          */
-        Pais operator[](std::string nombre) const;
+        Pais operator[](Punto localizacion) const;
 
         /**
          * @brief agrega un nuevo pais al objeto
          * @param pais pais a ser agregado
-         * @note la clave del pais sera el nombre de este
+         * @note la clave del pais sera la localizacion de este
          */
         void introducirPais(Pais pais);
 };

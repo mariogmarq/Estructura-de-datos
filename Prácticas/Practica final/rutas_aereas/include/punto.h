@@ -77,7 +77,7 @@ public:
    * @brief sobrecarga del operador >>
    * @param is flujo de entrada
    * @param p punto al que introducir datos
-   * @note seguir formato de las rutas aereas -->  "(latitud,longitud)"
+   * @note seguir formato de paises.txt, difiere del formato de las rutas aereas
    */
   std::istream& operator>>(std::istream& is, Punto& p);
 

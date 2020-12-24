@@ -7,7 +7,7 @@
 #ifndef PAISES_H
 #define PAISES_H
 
-#include "pais.h"
+#include "Pais.h"
 #include <map>
 
 /**

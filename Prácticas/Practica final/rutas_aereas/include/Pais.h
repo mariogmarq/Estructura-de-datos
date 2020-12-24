@@ -7,7 +7,7 @@
 #ifndef PAIS_H
 #define PAIS_H
 
-#include "punto.h"
+#include "Punto.h"
 #include <string>
 
 /**

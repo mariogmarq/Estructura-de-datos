@@ -63,6 +63,10 @@ public:
   bool operator==(const Punto &orig) const {
     return this->latitud == orig.latitud && this->longitud == orig.longitud;
   }
+
+  bool operator<(const Punto& orig) const {
+    return this->latitud < orig.latitud;
+  }
 };
 
 /**

@@ -83,6 +83,13 @@ public:
    * @note seguir formato de paises.txt (distinto para puntos)
    */
   friend std::istream &operator>>(std::istream &is, Pais &p);
+
+  /**
+   * @brief sobrecarga del operator <<
+   * @param os flujo de salida
+   * @param p pais que sacar por pantalla
+   */
+  friend std::ostream &operator<<(std::ostream &os, const Pais &P);
 };
 
 #endif

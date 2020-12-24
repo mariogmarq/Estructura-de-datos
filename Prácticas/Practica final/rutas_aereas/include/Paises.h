@@ -23,13 +23,14 @@ public:
   /**
    * @brief constructor por defecto
    */
-  Paises();
+  Paises() = default;
 
   /**
    * @brief sobrecarga del operador [] para obtener un pais mediante su
    * localizacion
    * @param localizacion localizacion del pais a buscar
    * @return el pais con la ubicacion asociada
+   * @warning exepcion en caso de no tener la localizacion
    */
   Pais operator[](Punto localizacion) const;
 
@@ -84,7 +85,7 @@ public:
     }
     bool operator==(const const_iterator &it) { return it.p == p; }
     bool operator!=(const const_iterator &it) { return it.p != p; }
-    const Pais &operator*() const { return (*p).second; }
+    Pais operator*() const { return (*p).second; }
     friend class Paises;
   };
 

@@ -37,13 +37,13 @@ public:
    * @brief getter de la latitud
    * @return la latitud del punto
    */
-  float Latitud() const;
+  float GetLatitud() const;
 
   /**
    * @brief getter de la longitud
    * @return la longitud del punto
    */
-  float Longitud() const;
+  float GetLongitud() const;
 
   /**
    * @brief setter de la latitud
@@ -70,7 +70,12 @@ public:
    */
   std::pair<float, float> transLineal(float nLat, float nLong) const;
 
-
+  /**
+   * @brief operador de comparacion
+   */
+  bool operator==(const Punto& orig) const {
+    return this->latitud == orig.latitud && this->longitud == orig.longitud;
+  }
 };
 
   /**

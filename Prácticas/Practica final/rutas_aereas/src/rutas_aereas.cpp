@@ -1,6 +1,6 @@
-#include "imagen.h"
-#include "almacen_rutas.h"
-#include "Paises.h"
+#include "../include/imagen.h"
+#include "../include/almacen_rutas.h"
+#include "../include/Paises.h"
 #include <iostream>
 #include <cmath>
 #include <fstream>

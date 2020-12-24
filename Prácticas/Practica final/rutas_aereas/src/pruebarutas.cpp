@@ -1,4 +1,4 @@
-#include "Ruta.h"
+#include "../include/Ruta.h"
 #include <iostream>
 #include <string>
 #include <fstream>

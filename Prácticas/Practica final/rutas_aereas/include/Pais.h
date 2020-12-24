@@ -18,7 +18,6 @@ class Pais{
         Punto localizacion;
         std::string nombre;
         std::string bandera;        
-        std::string carpetaBanderas;
     public:
 
         /**
@@ -30,10 +29,9 @@ class Pais{
          * @brief constructor de la clase pais
          * @param localizacion localizacion del pais
          * @param nombre nombre del pais
-         * @param folder directorio donde estara bandera
          * @param bandera nombre del archivo ppm de la bandera
          */
-        Pais(Punto localizacion, std::string nombre, std::string folder, std::string bandera);
+        Pais(Punto localizacion, std::string nombre, std::string bandera);
 
         /**
          * @brief getter de la localizacion del pais
@@ -45,7 +43,7 @@ class Pais{
          * @brief getter del nombre del pais
          * @return el nombre del pais
          */
-        std::string Nombre() const;
+        std::string GetPais() const;
 
         /**
          * @brief establece la localizacion del pais
@@ -61,10 +59,22 @@ class Pais{
 
         /**
          * @brief estable la bandera del pais
-         * @param folder directorio donde esta almacenada la bandera del pais
          * @param bandera nombre de la bandera del pais
          */
-        void setBandera(std::string folder, std::string bandera);
+        void setBandera(std::string bandera);
+
+        /**
+         * @brief getter de la bandera
+         */
+        std::string GetBandera() const;
+
+
+        /**
+         * @brief operador de comparacion
+         */
+        bool operator==(const Pais& orig) const {
+            return this->bandera == orig.bandera && this->localizacion == orig.localizacion;
+        }
 };
 
 /**

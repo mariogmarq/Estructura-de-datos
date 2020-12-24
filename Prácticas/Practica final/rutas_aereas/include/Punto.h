@@ -8,8 +8,8 @@
 #ifndef PUNTO_H
 #define PUNTO_H
 
-#include <utility>
 #include <iostream>
+#include <utility>
 
 /**
  * @brief TDA Punto, representa un punto en coordenadas geograficas
@@ -58,33 +58,27 @@ public:
   void setLongitud(float longitud);
 
   /**
-   * @brief Aplica una transformacion lineal a la longitud y latitud tal que
-   * devuelve una nueva longitud comprendida entre [0, nLong) y latitud
-   * comprendida entre [0,nLat)
-   * @param nLat nueva valor maximo para la latitud, debe de ser positivo
-   * @param nLong nuevo valor maximo para la longitud, debe de ser positivo
-   * @return un pair con los valores nuevos calculados, siendo en orden la
-   * latitud y la longitud
-   * @note utilizar esta funcion para obtener la posicion del punto en una
-   * imagen de dimensiones nLat*nLong
-   */
-  std::pair<float, float> transLineal(float nLat, float nLong) const;
-
-  /**
    * @brief operador de comparacion
    */
-  bool operator==(const Punto& orig) const {
+  bool operator==(const Punto &orig) const {
     return this->latitud == orig.latitud && this->longitud == orig.longitud;
   }
 };
 
-  /**
-   * @brief sobrecarga del operador >>
-   * @param is flujo de entrada
-   * @param p punto al que introducir datos
-   * @note seguir formato de paises.txt, difiere del formato de las rutas aereas
-   */
-  std::istream& operator>>(std::istream& is, Punto& p);
+/**
+ * @brief sobrecarga del operador >>
+ * @param is flujo de entrada
+ * @param p punto al que introducir datos
+ * @note seguir formato de ruta aereaas
+ */
+std::istream &operator>>(std::istream &is, Punto &p);
 
+/**
+ * @brief sobrecarga del operador <<
+ * @param os flujo de salida
+ * @param p punto al que introducir datos
+ * @note seguir formato de paises.txt, difiere del formato de las rutas aereas
+ */
+std::ostream &operator<<(std::ostream &os, const Punto &p);
 
 #endif

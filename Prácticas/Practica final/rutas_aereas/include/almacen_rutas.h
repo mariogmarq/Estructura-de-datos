@@ -10,7 +10,7 @@
 #include "Ruta.h"
 
 /**
- * @class Almacen de rutas, almacena rutas
+ * @brief TDA Almacen_rutas, almacena rutas
  */
 class Almacen_Rutas {
     private:
@@ -31,14 +31,14 @@ class Almacen_Rutas {
  * @param is flujo de entrada
  * @param AR objeto al que introducir datos
  */
-  friend ostream &operator<<(ostream &os, const Almacen_Rutas &AR);
+  friend std::ostream &operator<<(std::ostream &os, const Almacen_Rutas &AR);
 
 /**
  * @brief sobrecarga del operador <<
  * @param os flujo de salida
  * @param AR objeto del que sacar datos
  */
-  friend istream &operator>>(istream &is, Almacen_Rutas &AR);
+  friend std::istream &operator>>(std::istream &is, Almacen_Rutas &AR);
 };
 
 #endif

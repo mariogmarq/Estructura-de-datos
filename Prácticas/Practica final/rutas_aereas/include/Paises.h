@@ -133,7 +133,7 @@ public:
  * @param R objeto al que introducir datos
  * @note seguir formato de paises.txt, defiere del de las rutas aereas
  */
-  friend ostream &operator<<(ostream &os, const Paises &R);
+  friend std::ostream &operator<<(std::ostream &os, const Paises &R);
 
 /**
  * @brief sobrecarga del operador <<
@@ -141,7 +141,7 @@ public:
  * @param R objeto del que sacar datos
  * @note seguir formato de paises.txt, defiere del de las rutas aereas
  */
-  friend istream &operator>>(istream &is, Paises &R);
+  friend std::istream &operator>>(std::istream &is, Paises &R);
 };
 
 #endif

@@ -85,7 +85,7 @@ public:
    * @brief getter del numbre de la ruta
    * @return el nombre de la ruta
    */
-  std::string nombre() const;
+  std::string GetNombre() const;
 
   // Clases iteradoras
   class const_iterator;

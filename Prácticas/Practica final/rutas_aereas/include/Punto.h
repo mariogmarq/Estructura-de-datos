@@ -57,32 +57,42 @@ public:
    */
   void setLongitud(float longitud);
 
-  /**
-   * @brief operador de comparacion
-   */
-  bool operator==(const Punto &orig) const {
-    return this->latitud == orig.latitud && this->longitud == orig.longitud;
-  }
+    /**
+     * @brief operador de comparacion
+     */
+    bool operator==(const Punto &orig) const {
+        return this->latitud == orig.latitud && this->longitud == orig.longitud;
+    }
 
-  bool operator<(const Punto& orig) const {
-    return this->latitud < orig.latitud;
-  }
+    bool operator<(const Punto &orig) const {
+        return this->latitud < orig.latitud;
+    }
+
+    /**
+     * @brief sobrecarga del operador >>
+     * @param is flujo de entrada
+     * @param p punto al que introducir datos
+     * @note seguir formato de ruta aereaas
+     */
+    friend std::istream &operator>>(std::istream &is, Punto &p) {
+        float a,b;
+        is >> a;
+        p.setLatitud(a);
+        is >> b;
+        p.setLongitud(b);
+        return is;
+    };
+
+    /**
+    * @brief sobrecarga del operador <<
+    * @param os flujo de salida
+    * @param p punto al que introducir datos
+    * @note seguir formato de paises.txt, difiere del formato de las rutas aereas
+    */
+    friend std::ostream &operator<<(std::ostream &os, const Punto &p) {
+        os << p.GetLatitud() << " " << p.GetLongitud();
+        return os;
+    };
 };
-
-/**
- * @brief sobrecarga del operador >>
- * @param is flujo de entrada
- * @param p punto al que introducir datos
- * @note seguir formato de ruta aereaas
- */
-std::istream &operator>>(std::istream &is, Punto &p);
-
-/**
- * @brief sobrecarga del operador <<
- * @param os flujo de salida
- * @param p punto al que introducir datos
- * @note seguir formato de paises.txt, difiere del formato de las rutas aereas
- */
-std::ostream &operator<<(std::ostream &os, const Punto &p);
 
 #endif

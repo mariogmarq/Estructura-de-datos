@@ -11,6 +11,7 @@ using namespace std;
 int main(){
     Punto A;
     Punto B(31.2, 12);
+    cout << "Test clase Punto" << endl;
     cout << "Constructores: " << endl;
     cout << A << "=" << "0 0" << endl;
     cout << B << "=" << "31.2 12 " << endl;

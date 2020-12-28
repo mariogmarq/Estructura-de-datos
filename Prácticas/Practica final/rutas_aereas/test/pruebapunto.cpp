@@ -1,6 +1,6 @@
 /**
  * @author Mario Garcia Marquez y Daniel Alconchel Vazquez
- * @file pruebaunto.cpp
+ * @file pruebapunto.cpp
  */
 
 #include "../include/Punto.h"

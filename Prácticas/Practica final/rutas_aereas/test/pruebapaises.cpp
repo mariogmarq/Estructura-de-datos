@@ -12,8 +12,6 @@ using namespace std;
 int main(int argc, char ** argv){
     Paises A;
     cout << "Probando clase paises: " << endl;
-    cout << "Constructores:" << endl;
-    cout << A << "=" << "0 0" << endl;
     cout << "Insertar: " << endl;
     Punto aux1(10, 10);
     Punto aux2(12, 10);

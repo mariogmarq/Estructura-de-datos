@@ -31,7 +31,7 @@ ostream &operator<<(ostream &os, const Paises &R) {
 
   Paises::const_iterator it;
   for (it = R.begin(); it != R.end(); ++it) {
-    os << (*it) << "\t";
+    os <<  (*it) << endl;
   }
   return os;
 }

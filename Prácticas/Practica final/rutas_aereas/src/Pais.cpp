@@ -37,6 +37,6 @@ istream &operator>>(istream &is, Pais &P) {
 }
 
 ostream &operator<<(ostream &os, const Pais &P) {
-  os << P.Localizacion() << " " << P.GetPais() << " " << P.GetBandera() << endl;
+  os << P.Localizacion() << " " << P.GetPais() << " " << P.GetBandera();
   return os;
 }

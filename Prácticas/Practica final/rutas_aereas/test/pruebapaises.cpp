@@ -4,11 +4,12 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include "../include/Paises.h"
 
 using namespace std;
 
-int main(){
+int main(int argc, char ** argv){
     Paises A;
     cout << "Probando clase paises: " << endl;
     cout << "Constructores:" << endl;
@@ -25,7 +26,8 @@ int main(){
     cout << "Resultado válido" << endl;
     cout << P1 << P2 << endl;
     cout << "operator>>" << endl;
-    cin >> A;
+    ifstream f(argv[1]);
+    f >> A;
     cout << A << endl;
     return 0;
 }

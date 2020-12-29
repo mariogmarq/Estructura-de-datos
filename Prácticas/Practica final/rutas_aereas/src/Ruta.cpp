@@ -83,9 +83,10 @@ std::istream& operator>>(std::istream& is, Ruta& r){
     int c;
     is >> c;
     for (int i = 0; i<c; i++){
-        Punto aux;
-        is >> aux;
-        r.nuevoPunto(aux);
+        char basura;
+        float lat, lon;
+        is >> basura >> lat >> basura >> lon >> basura;
+        r.nuevoPunto(Punto(lat, lon));
     }
     return is;
 }

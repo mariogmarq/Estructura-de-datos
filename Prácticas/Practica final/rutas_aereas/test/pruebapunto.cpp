@@ -4,6 +4,7 @@
  */
 
 #include "../include/Punto.h"
+#include <sstream>
 #include <iostream>
 
 using namespace std;
@@ -23,8 +24,9 @@ int main(){
     cout << A.GetLongitud() << "=" << "12" << endl;
     cout << "istream>>:" << endl;
     Punto C;
-    cin >> C;
-    cout << C << endl;
+    stringstream s("-88.67384598 90.625171");
+    s >> C;
+    cout << C << '=' << "-88.67384598 90.625171" << endl;
     cout << "Bool==:" << endl;
     cout << A.operator==(B) << "=" << "0" << endl;
     cout << "Bool<:" << endl;

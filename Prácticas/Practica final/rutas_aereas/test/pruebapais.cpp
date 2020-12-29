@@ -4,6 +4,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include "../include/Pais.h"
 
 using namespace std;
@@ -28,7 +29,8 @@ int main(){
     cout << A.operator==(B) << "=" << "0" << endl;
     cout << A.operator==(A) << "=" << "1" << endl;
     cout << "Operator>>" << endl;
-    cin >> A;
+    stringstream s("34.520418555522845	69.20082090000005	Afganistan	afganistan.ppm");
+    s >> A;
     cout << A << endl;
     return 0;
 }

@@ -132,7 +132,7 @@ int main(int argc, char * argv[]){
   Paises Pses;
   ifstream f (argv[1]);
   f>>Pses;
-  //cout<<Pses;
+  cout<<Pses;
   Imagen I;
   I.LeerImagen(argv[2]);
   

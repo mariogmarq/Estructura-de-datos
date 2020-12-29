@@ -67,7 +67,7 @@ public:
    * @brief agrega un nuevo punto de interes a la ruta
    * @param punto El punto de interes
    */
-  void nuevoInteres(std::string punto);
+  void nuevoInteres(Punto punto);
 
   /**
    * @brief devuelve la cantidad de puntos de la ruta
@@ -162,6 +162,15 @@ public:
   Pais determinar(const const_iterator& c) const {
       return (*paises)[*c];
   }
+
+    /**
+     * @brief sobrecarga del operador <<
+     * @param os flujo de salida
+     * @param r ruta que sacar
+     * @note seguir formato de de rutas
+     */
+  friend std::ostream& operator<<(std::ostream& os, const Ruta& r);
+
 };
 
 /**
@@ -172,12 +181,5 @@ public:
    */
   std::istream& operator>>(std::istream& is, Ruta& r);
 
-/**
-   * @brief sobrecarga del operador <<
-   * @param os flujo de salida
-   * @param r ruta que sacar
-   * @note seguir formato de de rutas
-   */
-  std::ostream& operator<<(std::ostream& os, const Ruta& r);
 
 #endif

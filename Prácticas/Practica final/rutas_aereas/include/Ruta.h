@@ -20,7 +20,6 @@ private:
                   // datos sobre ellos, no es memoria dinamica!!!
   std::string nombre;           // nombre de la ruta
   std::vector<Punto> recorrido; // Puntos por donde pasa la ruta, en orden
-  std::vector<Punto> interes;   // Puntos de interes
 
 public:
   /**
@@ -64,22 +63,10 @@ public:
   void nuevoNombre(std::string nombre);
 
   /**
-   * @brief agrega un nuevo punto de interes a la ruta
-   * @param punto El punto de interes
-   */
-  void nuevoInteres(Punto punto);
-
-  /**
    * @brief devuelve la cantidad de puntos de la ruta
    * @return la cantidad de puntos de la ruta
    */
   int longitud() const;
-
-  /**
-   * @brief devuelve la cantidad de puntos de interes de la ruta
-   * @return la cantidad de puntos de interes
-   */
-  int cantidadInteres() const;
 
   /**
    * @brief getter del numbre de la ruta
@@ -159,27 +146,23 @@ public:
     return it;
   }
 
-  Pais determinar(const const_iterator& c) const {
-      return (*paises)[*c];
-  }
+  Pais determinar(const const_iterator &c) const { return (*paises)[*c]; }
 
-    /**
-     * @brief sobrecarga del operador <<
-     * @param os flujo de salida
-     * @param r ruta que sacar
-     * @note seguir formato de de rutas
-     */
-  friend std::ostream& operator<<(std::ostream& os, const Ruta& r);
-
+  /**
+   * @brief sobrecarga del operador <<
+   * @param os flujo de salida
+   * @param r ruta que sacar
+   * @note seguir formato de de rutas
+   */
+  friend std::ostream &operator<<(std::ostream &os, const Ruta &r);
 };
 
 /**
-   * @brief sobrecarga del operador >>
-   * @param is flujo de entrada
-   * @param r ruta a la que introducir datos
-   * @note seguir formato de rutas
-   */
-  std::istream& operator>>(std::istream& is, Ruta& r);
-
+ * @brief sobrecarga del operador >>
+ * @param is flujo de entrada
+ * @param r ruta a la que introducir datos
+ * @note seguir formato de rutas
+ */
+std::istream &operator>>(std::istream &is, Ruta &r);
 
 #endif

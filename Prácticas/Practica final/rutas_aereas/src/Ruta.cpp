@@ -10,7 +10,6 @@ Ruta::Ruta() {
   paises = nullptr;
   nombre = " ";
   recorrido.clear();
-  interes.clear();
 }
 
 Ruta::Ruta(Paises *paises) { this->paises = paises; }
@@ -45,18 +44,7 @@ void Ruta::nuevoPunto(Punto punto) {
 
 void Ruta::nuevoNombre(std::string nombre) { this->nombre = nombre; }
 
-void Ruta::nuevoInteres(Punto punto) {
-  bool ya_esta = false;
-  for (long unsigned int i = 0; i < interes.size(); i++)
-    if (interes[i].operator==(punto))
-      ya_esta = true;
-  if (!ya_esta)
-    interes.push_back(punto);
-}
-
 int Ruta::longitud() const { return this->recorrido.size(); }
-
-int Ruta::cantidadInteres() const { return this->interes.size(); }
 
 std::string Ruta::GetNombre() const { return this->nombre; }
 
@@ -77,20 +65,6 @@ std::istream &operator>>(std::istream &is, Ruta &r) {
     float lat, lon;
     is >> basura >> lat >> basura >> lon >> basura;
     r.nuevoPunto(Punto(lat, lon));
-  }
-
-  // Comprobamos si hay puntos de interes
-  if (is.peek() == '#') {
-    std::string a;
-    is >> a;
-    int c;
-    is >> c;
-    for (int i = 0; i < c; i++) {
-      char basura;
-      float lat, lon;
-      is >> basura >> lat >> basura >> lon >> basura;
-      r.nuevoInteres(Punto(lat, lon));
-    }
   }
 
   return is;
